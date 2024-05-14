@@ -6,14 +6,15 @@ const username = process.env.TYPE_ORM_USER_NAME;
 const host = process.env.TYPE_ORM_HOST;
 const password = process.env.TYPE_ORM_PASSWORD;
 const database = process.env.TYPE_ORM_DATABASE;
+// TODO: fix .env are not getting picked up
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host,
+  host: undefined,
   port: 5432,
-  username,
-  password,
-  database,
+  username: 'colinsheppard',
+  password: undefined,
+  database: 'postgres',
   synchronize: true,
   logging: true,
   entities: [User],
