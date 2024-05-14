@@ -3,7 +3,7 @@ echo "Starting the server"
 
 echo "Installing server"
 cd src/server
-npm install
+yarn
 
 echo "Starting Server"
 npm run start
