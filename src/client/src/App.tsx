@@ -1,13 +1,13 @@
 import React from 'react';
-import './App.css';
 import useFetchData from './components/useFetchData';
 
 function App() {
   const {data} = useFetchData();
 
+  console.log(data)
   return (
     <div>
-      {"boiler plate"}
+      {`boiler plate: ${data && data.message}`}
     </div>
   );
 }
